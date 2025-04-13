@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry, VIYUUU 💔</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      min-height: 100vh;
+      padding: 30px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .card {
+      background: #ffffffcc;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #333;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #ff6f61;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ff3b2e;
+      transform: scale(1.05);
+    }
+
+    #forgiveness-message {
+      display: none;
+      margin-top: 25px;
+      font-weight: bold;
+      color: green;
+      font-size: 1.6rem;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff6f61;
+      transform: rotate(45deg);
+      animation: floatHeart 10s infinite ease-in-out;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff6f61;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatHeart {
+      0% { transform: translateY(0) rotate(45deg); opacity: 0.7; }
+      50% { transform: translateY(-100px) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(0) rotate(45deg); opacity: 0.7; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+ <div class="heart" style="top: 40%; left: 20%; animation-delay: 1.5s;"></div>
+<div class="heart" style="top: 50%; left: 60%; animation-delay: 2.8s;"></div>
+<div class="heart" style="top: 75%; left: 40%; animation-delay: 3.3s;"></div>
+<div class="heart" style="top: 65%; left: 15%; animation-delay: 1.2s;"></div>
+<div class="heart" style="top: 95%; left: 75%; animation-delay: 4.1s;"></div>
+
+  <div class="card">
+    <h1>I'm Sorry</h1>
+    <p>VIYAAA,</p>
+    <p>I know it wasn’t a crime, but let me over-apologize dramatically anyway</p>
+    <p>Okay, I admit it.... I really didn't mean to hurt you.</p>
+    <p>I made a choti si bhool. Not full-on “disown me” level, but definitely “roll your eyes and call me a cartoon” level. 🤦‍♂️ BUT...</p>
+    <p>I promise to be 27% less annoying next time.💭</p>
+    <p>Chilli Oil Maggi khayegi??</p>
+    <button onclick="forgiveMe()">Haan bol de! ❤️</button>
+    <div id="forgiveness-message">Thank youuuu !!!! You just made my rest of the day HAPPYYYY.</div>
+  </div>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    function forgiveMe() {
+      const msg = document.getElementById("forgiveness-message");
+      msg.style.display = "block";
+      confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+</body>
+</html>
